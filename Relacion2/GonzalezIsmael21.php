@@ -12,7 +12,6 @@
         <div>
             <label for="num1">Introduce un numero 1</label>
             <input type="text" name="num1" id="num1">
-            <p>bada esta malito</p>
         </div>
         <div>
             <select name="op" id="op">
@@ -26,7 +25,6 @@
         <div>
             <label for="num2">Introduce un numero 2</label>
             <input type="text" name="num2" id="num2" >
-            <p>tonto el que lo lea</p>
         </div>
         <input type="submit" value="Enviar">
     </form>
