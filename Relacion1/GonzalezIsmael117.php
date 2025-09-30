@@ -19,8 +19,10 @@
             $resto -= $divisor;
             $cociente++;
         }
-        echo "Cociente", $cociente, "<br>";
-        echo "Resto", $resto;
+        echo "Dividendo: ", $dividendo, "<br>";
+        echo "Divisor: ", $divisor, "<br>";
+        echo "Cociente: ", $cociente, "<br>";
+        echo "Resto: ", $resto;
     ?>
 </body>
 </html>
