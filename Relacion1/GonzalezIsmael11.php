@@ -10,6 +10,7 @@
 
 <body>
     <h1>Hola mundo en php</h1>
+    <h2>EJERCICIO 1</h2>
     <h3 style='color:red'>
         <i>
             <?php

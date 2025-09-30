@@ -7,6 +7,7 @@
     <link rel="shortcut icon" href="./logo.png" type="image/x-icon">
 </head>
 <body>
+    <h2>EJERCICIO 15</h2>
     <?php
     $num = 20;
     $contador = 2;

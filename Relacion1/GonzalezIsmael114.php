@@ -7,6 +7,7 @@
     <link rel="shortcut icon" href="./logo.png" type="image/x-icon">
 </head>
 <body>
+    <h2>EJERCICIO 14</h2>
      <?php
     $num = 20;
     $sumando = 0;

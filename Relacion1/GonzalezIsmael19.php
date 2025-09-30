@@ -9,6 +9,7 @@
 </head>
 
 <body>
+    <h2>EJERCICIO 9</h2>
     <?php
     $lado1 = 1;
     $lado2 = 4.5;

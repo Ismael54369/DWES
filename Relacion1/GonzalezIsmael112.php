@@ -9,6 +9,7 @@
 </head>
 
 <body>
+    <h2>EJERCICIO 12</h2>
     <?php
     $nota = 8;
     switch ($nota) {

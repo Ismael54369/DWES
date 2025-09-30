@@ -9,6 +9,7 @@
 </head>
 
 <body>
+    <h2>EJERCICIO 5</h2>
     <?php
     // Array Asociativo constante en PHP
     const TEMPERATURAS = [

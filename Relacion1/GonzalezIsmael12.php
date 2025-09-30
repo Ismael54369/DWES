@@ -10,6 +10,7 @@
 
 <body>
     <h1>Variables en PHP</h1>
+    <h2>EJERCICIO 2</h2>
     <?php
     $nombre = "Ismael"; // Variable de tipo cadena  
     $edad = 23; // Variable de tipo entero

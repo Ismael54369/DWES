@@ -9,6 +9,7 @@
 </head>
 
 <body>
+    <h2>EJERCICIO 8</h2>
     <?php
     $rubrica = [
         "Inicial" => 0.20,

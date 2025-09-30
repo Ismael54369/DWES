@@ -10,6 +10,7 @@
 
 <body>
     <h1>Superglobals en PHP</h1>
+    <h2>EJERCICIO 3</h2>
     <?php
     // Variables superglobales en PHP
 

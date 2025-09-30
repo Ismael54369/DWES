@@ -7,18 +7,19 @@
     <link rel="shortcut icon" href="./logo.png" type="image/x-icon">
 </head>
 <body>
+    <h2>EJERCICIO 18</h2>
     <?php
     $num1 = 20;
     $num2 = 12;
-    $comun;
-    if ($num1 > $num2) {
-        $comun = $num1;
-    } else {
-        $comun = $num2;
+    echo "El primer numero es, ", $num1 ," ,el segundo numero es, ", $num2, "<br>";
+    while ($num1 != $num2) {
+        if ($num1 > $num2) {
+            $num1 -= $num2;
+        } else {
+            $num2 -= $num1;
+        }
     }
-    while ($a <= 10) {
-        # code...
-    }
+    echo "El MCD es: ", $num1;
     ?>
 </body>
 </html>

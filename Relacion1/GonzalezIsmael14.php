@@ -10,6 +10,7 @@
 
 <body>
     <h1>Array en PHP</h1>
+    <h2>EJERCICIO 4</h2>
     <?php
     // Arrays en PHP
     const SEMANA = [

@@ -9,6 +9,7 @@
 </head>
 
 <body>
+    <h2>EJERCICIO 7</h2>
     <?php
     $nota1 = 7;
     $nota2 = 8;

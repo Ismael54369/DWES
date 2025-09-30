@@ -6,6 +6,7 @@
     <title>Document</title>
 </head>
 <body>
+    <h2>EJERCICIO 17</h2>
     <?php
         // Haz un script en PHP que calcule la división de dos números naturales utilizando el algoritmo de Euclides para la división
         $dividendo = 10;
