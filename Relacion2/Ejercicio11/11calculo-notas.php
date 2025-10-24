@@ -43,7 +43,7 @@
                 <h4>Nota Final: <span class="badge <?php echo $badgeColor; ?> fs-4"><?php echo number_format($notaFinal, 2); ?></span></h4>
             </div>
         </div>
-        <a href="./GonzalezIsmael212.php" class="btn btn-outline-light mt-3">Volver al formulario</a>
+        <a href="./GonzalezIsmael211.php" class="btn btn-outline-light mt-3">Volver al formulario</a>
     </div>
 </body>
 

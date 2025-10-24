@@ -1,159 +1,179 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <!-- =================================================================
-    METADATOS Y ENLACES (HEAD)
-    ================================================================== -->
-
-    <!-- Codificación de caracteres, esencial para mostrar tildes y caracteres especiales -->
+    <!-- ================================================================= -->
+    <!-- METADATOS Y ENLACES (HEAD)                                      -->
+    <!-- ================================================================= -->
+    <!-- Codificación de caracteres (esencial para tildes y eñes) -->
     <meta charset="UTF-8">
-    <!-- Asegura que la página se vea bien en todos los dispositivos (diseño responsive) -->
+    <!-- Configuración del viewport para un diseño responsive -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Plantilla Básica de Bootstrap</title>
+    <title>Plantilla de Formulario con Bootstrap</title>
 
     <!-- CSS de Bootstrap desde CDN (Content Delivery Network) -->
-    <!-- La hoja de estilos principal que aplica todo el diseño de Bootstrap. -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 
     <!-- (Opcional) Iconos de Bootstrap desde CDN -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 </head>
-<body class="bg-light"> <!-- 'bg-light' da un fondo gris claro a toda la página -->
+<body class="bg-body-tertiary"> <!-- 'bg-body-tertiary' da un fondo gris claro a la página -->
 
-    <!-- =================================================================
-    BARRA DE NAVEGACIÓN (NAVBAR)
-    ================================================================== -->
-    <!-- 'navbar': Define el componente. -->
-    <!-- 'navbar-expand-lg': La barra se expande (muestra los links) en pantallas grandes (lg) o más. En pantallas más pequeñas, se colapsa en un menú de hamburguesa. -->
-    <!-- 'navbar-dark' y 'bg-dark': Estilo para texto claro sobre fondo oscuro. Alternativa: 'navbar-light' y 'bg-light'. -->
+    <!-- ================================================================= -->
+    <!-- BARRA DE NAVEGACIÓN (Opcional, se puede quitar si no se necesita) -->
+    <!-- ================================================================= -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm">
-        <!-- 'container': Centra y ajusta el ancho del contenido. Usa 'container-fluid' para ancho completo. -->
         <div class="container">
-            <!-- 'navbar-brand': Para el logo o nombre del sitio. -->
-            <a class="navbar-brand" href="#">Mi Sitio Web</a>
-            
-            <!-- Botón de hamburguesa para dispositivos móviles -->
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            
-            <!-- Contenedor de los enlaces de navegación que se colapsará en móviles -->
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <!-- 'navbar-nav': Contenedor de los elementos de la lista. 'ms-auto' alinea los links a la derecha. -->
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link active" href="#">Inicio</a> <!-- 'active' resalta el link actual -->
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Servicios</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Contacto</a>
-                    </li>
-                </ul>
-            </div>
+            <a class="navbar-brand" href="#">
+                <i class="bi bi-card-list"></i>
+                Formularios Bootstrap
+            </a>
         </div>
     </nav>
 
-    <!-- =================================================================
-    CONTENIDO PRINCIPAL Y SISTEMA DE GRID
-    ================================================================== -->
-    <main class="container my-5"> <!-- 'my-5' añade margen vertical (margin-top y margin-bottom) -->
-        
-        <!-- 'row': Define una fila para el sistema de rejilla (grid). -->
-        <div class="row">
-            <!-- 'col-md-8': Ocupa 8 de 12 columnas en pantallas medianas (md) o más. En pantallas pequeñas, ocupa el 100%. -->
-            <div class="col-md-8">
-                <h1 class="mb-4">Título Principal de la Página</h1>
-                <p>Este es un párrafo de introducción. El sistema de grid de Bootstrap se basa en 12 columnas. Puedes combinar clases como 'col-12 col-sm-6 col-lg-4' para un control preciso en diferentes tamaños de pantalla.</p>
+    <!-- ================================================================= -->
+    <!-- CONTENIDO PRINCIPAL DEL FORMULARIO                              -->
+    <!-- ================================================================= -->
+    <main class="container my-5">
+        <!-- 'justify-content-center' centra la columna en la fila -->
+        <div class="row justify-content-center">
+            <!-- 'col-lg-8' hace que el formulario ocupe 8 de 12 columnas en pantallas grandes (lg) o más -->
+            <div class="col-lg-8">
 
-                <!-- =================================================================
-                TARJETA (CARD)
-                ================================================================== -->
-                <div class="card shadow-sm mb-4"> <!-- 'shadow-sm' añade una sombra sutil. 'mb-4' añade margen inferior. -->
-                    <div class="card-header">
-                        Título de la Tarjeta
+                <!-- Usamos un componente 'card' para enmarcar el formulario -->
+                <div class="card shadow-sm">
+                    <div class="card-header bg-primary text-white">
+                        <h1 class="h4 mb-0">Formulario de Registro</h1>
                     </div>
                     <div class="card-body">
-                        <h5 class="card-title">Subtítulo</h5>
-                        <p class="card-text">Contenido principal de la tarjeta. Ideal para mostrar información encapsulada.</p>
-                        <a href="#" class="btn btn-primary">Botón de Acción</a> <!-- 'btn' y 'btn-primary' para un botón azul. -->
-                    </div>
-                    <div class="card-footer text-muted">
-                        Pie de la tarjeta
-                    </div>
-                </div>
+                        <p class="card-text mb-4">Rellena los siguientes campos para crear tu cuenta.</p>
+                        
+                        <!-- INICIO DEL FORMULARIO -->
+                        <!-- 'needs-validation' y 'novalidate' son para la validación de Bootstrap -->
+                        <form class="needs-validation" novalidate>
 
-                <!-- =================================================================
-                ALERTA (ALERT)
-                ================================================================== -->
-                <!-- 'alert' y 'alert-success' para un mensaje de éxito. Otros colores: 'alert-info', 'alert-warning', 'alert-danger'. -->
-                <div class="alert alert-success" role="alert">
-                    ¡Operación realizada con éxito!
-                </div>
+                            <!-- Campo de Texto: Nombre -->
+                            <!-- 'mb-3' añade un margen inferior para separar los campos -->
+                            <div class="mb-3">
+                                <!-- 'form-label' da estilo a la etiqueta -->
+                                <label for="nombre" class="form-label">Nombre Completo</label>
+                                <!-- 'form-control' da el estilo de Bootstrap al input -->
+                                <input type="text" class="form-control" id="nombre" name="nombre" required>
+                                <!-- Mensaje para validación en caso de error -->
+                                <div class="invalid-feedback">
+                                    Por favor, introduce tu nombre.
+                                </div>
+                            </div>
 
-            </div>
+                            <!-- Campo de Email -->
+                            <div class="mb-3">
+                                <label for="email" class="form-label">Correo Electrónico</label>
+                                <input type="email" class="form-control" id="email" name="email" required>
+                                <div class="form-text">Nunca compartiremos tu email con nadie.</div>
+                                <div class="invalid-feedback">
+                                    Por favor, introduce un correo electrónico válido.
+                                </div>
+                            </div>
 
-            <!-- 'col-md-4': Ocupa las 4 columnas restantes en pantallas medianas o más. -->
-            <div class="col-md-4">
-                <!-- =================================================================
-                FORMULARIO BÁSICO
-                ================================================================== -->
-                <h3 class="h5">Formulario de Contacto</h3>
-                <form>
-                    <!-- 'mb-3': Margen inferior para separar los campos. -->
-                    <div class="mb-3">
-                        <label for="emailInput" class="form-label">Email</label>
-                        <!-- 'form-control': Estilo estándar para inputs, textareas y selects. -->
-                        <input type="email" class="form-control" id="emailInput">
+                            <!-- Campo de Contraseña -->
+                            <div class="mb-3">
+                                <label for="password" class="form-label">Contraseña</label>
+                                <input type="password" class="form-control" id="password" name="password" required minlength="8">
+                                <div class="invalid-feedback">
+                                    La contraseña debe tener al menos 8 caracteres.
+                                </div>
+                            </div>
+
+                            <!-- Campo de Selección (Select) -->
+                            <div class="mb-3">
+                                <label for="pais" class="form-label">País</label>
+                                <!-- 'form-select' da el estilo de Bootstrap al select -->
+                                <select class="form-select" id="pais" name="pais" required>
+                                    <option selected disabled value="">Elige una opción...</option>
+                                    <option value="es">España</option>
+                                    <option value="mx">México</option>
+                                    <option value="ar">Argentina</option>
+                                </select>
+                                <div class="invalid-feedback">
+                                    Por favor, selecciona un país.
+                                </div>
+                            </div>
+
+                            <!-- Campo de Área de Texto (Textarea) -->
+                            <div class="mb-3">
+                                <label for="biografia" class="form-label">Biografía (opcional)</label>
+                                <textarea class="form-control" id="biografia" name="biografia" rows="3"></textarea>
+                            </div>
+
+                            <!-- Grupo de Checkboxes -->
+                            <div class="mb-3">
+                                <label class="form-label">Intereses</label>
+                                <!-- 'form-check' agrupa etiqueta e input para un mejor espaciado -->
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="tecnologia" id="checkTecnologia">
+                                    <label class="form-check-label" for="checkTecnologia">Tecnología</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="deportes" id="checkDeportes">
+                                    <label class="form-check-label" for="checkDeportes">Deportes</label>
+                                </div>
+                            </div>
+
+                            <!-- Checkbox individual para Términos y Condiciones -->
+                            <div class="form-check mb-3">
+                                <input class="form-check-input" type="checkbox" value="" id="terminos" required>
+                                <label class="form-check-label" for="terminos">
+                                    Acepto los términos y condiciones.
+                                </label>
+                                <div class="invalid-feedback">
+                                    Debes aceptar los términos para continuar.
+                                </div>
+                            </div>
+
+                            <!-- Separador -->
+                            <hr class="my-4">
+
+                            <!-- Botones de envío y reseteo -->
+                            <div class="d-flex justify-content-end">
+                                <button type="reset" class="btn btn-secondary me-2">Limpiar</button>
+                                <button type="submit" class="btn btn-primary">Registrarse</button>
+                            </div>
+
+                        </form>
+                        <!-- FIN DEL FORMULARIO -->
+
                     </div>
-                    <div class="mb-3">
-                        <label for="messageTextarea" class="form-label">Mensaje</label>
-                        <textarea class="form-control" id="messageTextarea" rows="3"></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-success">Enviar</button> <!-- 'btn-success' para un botón verde. -->
-                </form>
-
-                <!-- =================================================================
-                MODAL (VENTANA EMERGENTE)
-                ================================================================== -->
-                <div class="mt-4">
-                    <!-- Botón que dispara el modal -->
-                    <!-- 'data-bs-toggle="modal"': Activa la funcionalidad de modal. -->
-                    <!-- 'data-bs-target="#ejemploModal"': Apunta al ID del modal que se debe abrir. -->
-                    <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#ejemploModal">
-                        Abrir Ventana Modal
-                    </button>
                 </div>
             </div>
         </div>
     </main>
 
-    <!-- Estructura del Modal (puede ir en cualquier parte del body, pero al final es un buen lugar) -->
-    <!-- 'modal fade': Define el modal y añade una animación de desvanecimiento. -->
-    <div class="modal fade" id="ejemploModal" tabindex="-1">
-        <div class="modal-dialog modal-dialog-centered"> <!-- 'modal-dialog-centered' para centrarlo verticalmente. -->
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title">Título del Modal</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button> <!-- Botón para cerrar. -->
-                </div>
-                <div class="modal-body">
-                    <p>Contenido del cuerpo del modal.</p>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                    <button type="button" class="btn btn-primary">Guardar Cambios</button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- =================================================================
-    JAVASCRIPT DE BOOTSTRAP
-    ================================================================== -->
-    <!-- Esencial para que funcionen los componentes interactivos como el menú desplegable, modales, etc. -->
-    <!-- Se coloca justo antes de cerrar la etiqueta </body> para una carga más rápida de la página. -->
+    <!-- ================================================================= -->
+    <!-- JAVASCRIPT DE BOOTSTRAP Y SCRIPT DE VALIDACIÓN                  -->
+    <!-- ================================================================= -->
+    <!-- Bundle de JS de Bootstrap (incluye Popper.js) -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+    <!-- Script para activar la validación de Bootstrap -->
+    <script>
+        // IIFE (Immediately Invoked Function Expression) para evitar contaminar el scope global
+        (() => {
+            'use strict'
+
+            // Seleccionar todos los formularios a los que queremos aplicar estilos de validación de Bootstrap
+            const forms = document.querySelectorAll('.needs-validation')
+
+            // Bucle sobre ellos y prevenir el envío si no son válidos
+            Array.from(forms).forEach(form => {
+                form.addEventListener('submit', event => {
+                    if (!form.checkValidity()) {
+                        event.preventDefault()
+                        event.stopPropagation()
+                    }
+
+                    form.classList.add('was-validated')
+                }, false)
+            })
+        })()
+    </script>
 </body>
 </html>
