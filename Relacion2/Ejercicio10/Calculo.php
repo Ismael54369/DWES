@@ -15,31 +15,48 @@
             </div>
             <div class="card-body text-center">
                 <?php
+                    // Inicializamos la variable $resultado a null.
+                    // Esto nos ayudará a saber si se ha realizado un cálculo válido más adelante.
                     $resultado = null;
-                    if ($_SERVER["REQUEST_METHOD"] == "GET" && !empty($_GET)) {
-                        if ($_SERVER["REQUEST_METHOD"] == "GET" && !empty($_GET)) {
-                            $num1 = $_GET["num1"];
-                            $num2 = $_GET["num2"];
-                            $op = $_GET["op"];
-                        }
 
-                        if ($num1 !== false && $num2 !== false && $op) {
+                    // Comprobamos si la página ha sido solicitada usando el método "GET"
+                    // y si el array $_GET (que contiene los datos del formulario) no está vacío.
+                    if ($_SERVER["REQUEST_METHOD"] == "GET" && !empty($_GET)) {
+
+                        // Verificamos que las variables necesarias (num1, num2, op) han sido enviadas desde el formulario.
+                        // Es una buena práctica usar isset() para evitar errores si una variable no llega.
+                        if (isset($_GET["num1"], $_GET["num2"], $_GET["op"])) {
+                            // Obtenemos los valores del array $_GET.
+                            // Convertimos los números a tipo float para poder operar con decimales.
+                            $num1 = (float)$_GET["num1"];
+                            $num2 = (float)$_GET["num2"];
+                            $op = $_GET["op"];
+
+                            // La expresión 'match' es una alternativa moderna al 'switch'.
+                            // Compara el valor de $op y ejecuta el código correspondiente.
                             $resultado = match ($op) {
                                 "suma" => $num1 + $num2,
                                 "resta" => $num1 - $num2,
                                 "mult" => $num1 * $num2,
+                                // Para la división y el resto, comprobamos si el divisor es 0.
+                                // Usamos un operador ternario: (condición) ? valor_si_cierto : valor_si_falso.
                                 "div" => ($num2 == 0) ? "<span class='text-danger'>Error: División por cero</span>" : $num1 / $num2,
                                 "resto" => ($num2 == 0) ? "<span class='text-danger'>Error: Módulo por cero</span>" : $num1 % $num2,
+                                // 'default' se ejecuta si $op no coincide con ninguno de los casos anteriores.
                                 default => "<span class='text-warning'>Operación no válida</span>"
                             };
+
+                            // Mostramos el resultado en la página.
                             echo '<p class="h5 mt-3">El resultado de la operación es:</p>';
                             echo '<p class="display-4"><strong>' . $resultado . '</strong></p>';
                         } else {
+                            // Si faltan datos en la URL, mostramos un mensaje de error.
                             echo '<p class="h5 text-danger">Error: Datos inválidos o faltantes.</p>';
                         }
                     }
                 ?>
-                <a href="GonzalezIsmael210.php" class="btn btn-primary mt-4">Volver a la calculadora</a>
+                <!-- Este enlace permite al usuario volver al formulario para hacer otro cálculo -->
+                <a href="GonzalezIsmael210.php" class="btn btn-primary mt-4">Hacer otro cálculo</a>
             </div>
         </div>
     </div>
