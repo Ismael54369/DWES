@@ -96,7 +96,14 @@
                 </div>
             </div>
         </div>
-        <a href="../index.html" class="btn btn-primary mt-3">Volver al Index</a>
+        <!-- ================================================================= -->
+        <!-- NAVEGACIÓN ENTRE EJERCICIOS                                     -->
+        <!-- ================================================================= -->
+        <div class="mt-4 d-flex justify-content-between">
+            <a href="../Ejercicio13/GonzalezIsmael213.php" class="btn btn-secondary">&laquo; Ejercicio Anterior</a>
+            <a href="../index.html" class="btn btn-primary">Volver al Index</a>
+            <a href="../Ejercicio15/GonzalezIsmael215.php" class="btn btn-secondary">Siguiente Ejercicio &raquo;</a>
+        </div>
     </main>
     <!-- Enlace al archivo JavaScript que contiene las funciones de validación. Se suele poner al final del body. -->
     <script src="../Ejercicio14/validaciones2.js"></script>

@@ -53,11 +53,17 @@
             <input type="submit" class="btn btn-outline-primary" value="Enviar">
         </form>
 
-        <a href="../index.html" class="btn btn-primary mt-3">Volver al Index</a>
-
     </div>
-
+    <!-- ================================================================= -->
+    <!-- NAVEGACIÓN ENTRE EJERCICIOS (Fuera del contenedor flex principal) -->
+    <!-- ================================================================= -->
+    <div class="container pb-5">
+        <div class="mt-4 d-flex justify-content-between">
+            <a href="../Ejercicio10/GonzalezIsmael210.php" class="btn btn-secondary">&laquo; Ejercicio Anterior</a>
+            <a href="../index.html" class="btn btn-primary">Volver al Index</a>
+            <a href="../Ejercicio12/GonzalezIsmael212.php" class="btn btn-secondary">Siguiente Ejercicio &raquo;</a>
+        </div>
+    </div>
     <script src="./validaciones.js"></script>
 </body>
-
 </html>

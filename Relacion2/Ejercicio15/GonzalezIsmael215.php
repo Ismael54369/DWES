@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ejercicio 15</title>
-    <link rel="shortcut icon" href="../logo.svg" type="image/x-icon">
+    <link rel="shortcut icon" href="../../logo.svg" type="image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 </head>
 <body class="bg-light">
@@ -53,20 +53,30 @@
                     </div>
                     <!-- PHP para calcular el factorial si se ha enviado el formulario -->
                      <?php
-                     $num = htmlspecialchars($_GET['num']);
-                     $factorial = 1;
+                     // Verifica que el formulario se ha enviado y que los campos necesarios no están vacíos
+                     if ($_SERVER["REQUEST_METHOD"] == "GET" && !empty($_GET['num'])) {
+                        $num = htmlspecialchars($_GET['num']);
+                        $factorial = 1;
 
-                     for ($i = $num; $i > 1; $i--) {
-                        $factorial *= $i;
+                        for ($i = $num; $i > 1; $i--) {
+                            $factorial *= $i;
+                        }
+                        echo '<div class="card-footer bg-light text-dark text-center mt-3">';
+                        echo '<h4>Factorial de ' . $num . ': <span class="badge bg-primary fs-4">' . number_format($factorial) . '</span></h4>';
+                        echo '</div>';
                     }
-                    echo '<div class="card-footer bg-light text-dark text-center mt-3">';
-                    echo '<h4>Factorial de ' . $num . ': <span class="badge bg-primary fs-4">' . number_format($factorial) . '</span></h4>';
-                    echo '</div>';
                     ?>
                 </div> 
             </div>
         </div>
-        <a href="../index.html" class="btn btn-primary mt-3">Volver al Index</a>
+        <!-- ================================================================= -->
+        <!-- NAVEGACIÓN ENTRE EJERCICIOS                                     -->
+        <!-- ================================================================= -->
+        <div class="mt-4 d-flex justify-content-between">
+            <a href="../Ejercicio14/GonzalezIsmael214.php" class="btn btn-secondary">&laquo; Ejercicio Anterior</a>
+            <a href="../index.html" class="btn btn-primary">Volver al Index</a>
+            <a href="../Ejercicio16/GonzalezIsmael216.php" class="btn btn-secondary">Siguiente Ejercicio &raquo;</a>
+        </div>
     </main>
 
     <script>

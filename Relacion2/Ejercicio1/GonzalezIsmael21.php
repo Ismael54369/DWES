@@ -40,7 +40,13 @@
                 <!-- El resultado se mostrará aquí -->
             </div>
         </div>
-        <a href="../index.html" class="btn btn-primary mt-3">Volver al Index</a>
+        <!-- ================================================================= -->
+        <!-- NAVEGACIÓN ENTRE EJERCICIOS                                     -->
+        <!-- ================================================================= -->
+        <div class="mt-4 d-flex justify-content-between">
+            <a href="../index.html" class="btn btn-primary">Volver al Index</a>
+            <a href="../Ejercicio4/GonzalezIsmael24.php" class="btn btn-secondary">Siguiente Ejercicio &raquo;</a>
+        </div>
     </div>
 
     <script src="resultados.js"></script>

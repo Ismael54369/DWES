@@ -113,7 +113,14 @@
                 </div>
             </div>
         </div>
-        <a href="../index.html" class="btn btn-primary mt-3">Volver al Index</a>
+        <!-- ================================================================= -->
+        <!-- NAVEGACIÓN ENTRE EJERCICIOS                                     -->
+        <!-- ================================================================= -->
+        <div class="mt-4 d-flex justify-content-between">
+            <a href="../Ejercicio11/GonzalezIsmael211.php" class="btn btn-secondary">&laquo; Ejercicio Anterior</a>
+            <a href="../index.html" class="btn btn-primary">Volver al Index</a>
+            <a href="../Ejercicio 13/GonzalezIsmael213.php" class="btn btn-secondary">Siguiente Ejercicio &raquo;</a>
+        </div>
     </main>
     <!-- Este script es el código estándar de Bootstrap para activar los estilos de validación -->
     <script>
