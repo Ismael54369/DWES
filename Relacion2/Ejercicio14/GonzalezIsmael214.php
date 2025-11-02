@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ejericio 12</title>
-    <link rel="shortcut icon" href="./logo.png" type="image/x-icon">
+    <title>Ejericio 14</title>
+    <link rel="shortcut icon" href="../../logo.svg" type="image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 </head>
 <body class="bg-light"> <!-- 'bg-light' aplica un color de fondo gris claro a toda la página -->
@@ -33,7 +33,7 @@
                         <!-- action: A qué archivo se envían los datos. -->
                         <!-- method: Cómo se envían los datos (GET los muestra en la URL). -->
                         <!-- onsubmit: Ejecuta una función JavaScript antes de enviar. Si la función devuelve 'false', el envío se cancela. -->
-                        <form action="13calculo-notas.php" method="get" onsubmit="return validarFormularioNotas()">
+                        <form action="14calculo-notas.php" method="get" onsubmit="return validarFormularioNotas()">
                             
                             <!-- Campo para la Nota Inicial -->
                             <!-- 'mb-3' añade un margen inferior para separar los campos. -->
@@ -99,6 +99,6 @@
         <a href="../index.html" class="btn btn-primary mt-3">Volver al Index</a>
     </main>
     <!-- Enlace al archivo JavaScript que contiene las funciones de validación. Se suele poner al final del body. -->
-    <script src="../Ejercicio13/validaciones2.js"></script>
+    <script src="../Ejercicio14/validaciones2.js"></script>
 </body>
 </html>

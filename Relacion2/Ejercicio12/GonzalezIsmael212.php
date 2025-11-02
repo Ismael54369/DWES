@@ -113,6 +113,7 @@
                 </div>
             </div>
         </div>
+        <a href="../index.html" class="btn btn-primary mt-3">Volver al Index</a>
     </main>
     <!-- Este script es el código estándar de Bootstrap para activar los estilos de validación -->
     <script>

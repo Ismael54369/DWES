@@ -53,7 +53,7 @@
             <input type="submit" class="btn btn-outline-primary" value="Enviar">
         </form>
 
-
+        <a href="../index.html" class="btn btn-primary mt-3">Volver al Index</a>
 
     </div>
 

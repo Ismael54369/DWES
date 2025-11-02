@@ -52,6 +52,7 @@
             </div>
         </div>
     </div>
+    <a href="../index.html" class="btn btn-primary mt-3">Volver al Index</a>
 </main>
 </body>
 </html>
