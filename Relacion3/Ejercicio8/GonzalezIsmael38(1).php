@@ -55,10 +55,10 @@
                                 echo '<h5>Resultados:</h5>';
 
                                 if (in_array('mayusculas', $opciones)) {
-                                    echo '<p class="mb-1"><strong>Mayúsculas:</strong> <span class="text-success">' . strtoupper($texto1) . '</span></p>';
+                                    echo '<p class="mb-1"><strong>Mayúsculas:</strong> <span class="text-success">' , strtoupper($texto1) , '</span></p>';
                                 }
                                 if (in_array('minusculas', $opciones)) {
-                                    echo '<p class="mb-1"><strong>Minúsculas:</strong> <span class="text-success">' . strtolower($texto1) . '</span></p>';
+                                    echo '<p class="mb-1"><strong>Minúsculas:</strong> <span class="text-success">' , strtolower($texto1) , '</span></p>';
                                 }
                                 if (empty($opciones)) {
                                     echo '<p class="text-muted">No se seleccionó ninguna opción de conversión.</p>';
