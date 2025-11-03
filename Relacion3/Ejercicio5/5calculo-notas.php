@@ -56,7 +56,7 @@
                 ?>
                 <h5 class="card-title">Alumno: <?php echo $nombre; ?></h5>
                 <p class="card-text"><strong>Email:</strong> <?php echo $email ? $email : 'No proporcionado'; ?></p>
-                <p class="card-text"><strong>Documento:</strong> <?php echo $tipo_doc . ': ' . $num_doc; ?></p>
+                <p class="card-text"><strong>Documento:</strong> <?php echo $tipo_doc , ': ' , $num_doc; ?></p>
                 <hr>
                 <p class="card-text"><strong>Nota Inicial:</strong> <?php echo $calificaciones["Inicial"]; ?></p>
                 <p class="card-text"><strong>Nota Primera:</strong> <?php echo $calificaciones["Primera"]; ?></p>

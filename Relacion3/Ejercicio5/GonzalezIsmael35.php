@@ -201,6 +201,16 @@
                 esValido = false;
             }
 
+            // Validar documento
+            const tipoDoc = tipoDocSelect.value;
+            const numDoc = numDocInput.value;
+            const pattern = docInfo[tipoDoc].pattern;
+
+            if (!pattern.test(numDoc)) {
+                document.getElementById('num_docHelp').style.visibility = 'visible';
+                esValido = false;
+            }
+
             return !!esValido; // Convierte el resultado a un booleano estricto (true/false)
         }
 
