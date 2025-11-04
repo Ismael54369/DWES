@@ -44,40 +44,42 @@ function dadoTrucado() {
         <div class="row justify-content-center">
             <!-- La columna ocupará 8/12 en pantallas medianas y 6/12 en grandes para mejor legibilidad -->
             <div class="col-md-8 col-lg-6">
-                <!-- Título de la página, centrado y con margen inferior -->
-                <h1 class="mb-4 text-center">Lanzamiento de Dados</h1>
-                <!-- Tabla con estilos de Bootstrap: bordes, filas alternas, tema oscuro y texto centrado -->
-                <table class="table table-bordered table-striped table-dark text-center">
-                    <!-- Cabecera de la tabla -->
-                    <thead>
-                        <tr>
-                            <!-- 'scope="col"' mejora la accesibilidad para lectores de pantalla -->
-                            <th scope="col">Lanzamiento</th>
-                            <th scope="col">Dado Normal</th>
-                            <th scope="col">Dado Trucado</th>
-                        </tr>
-                    </thead>
-                    <!-- Cuerpo de la tabla donde se generarán las filas dinámicamente -->
-                    <tbody>
+                <div class="card shadow-sm">
+                    <div class="card-header bg-dark text-white"><h1 class="h4 mb-0 text-center">Lanzamiento de dados</h1></div>
+                    <div class="card-body">
+                        <form action="" method="get">
+                            <div class="mb-3">
+                                <label for="lanzamientos" class="form-label">Número de lanzamientos:</label>
+                                <input type="number" class="form-control" name="lanzamientos" id="lanzamientos" value="10" min="1" max="100" required>
+                            </div>
+                            <button type="submit" class="btn btn-primary w-100">Lanzar Dados</button>
+                        </form>
+                    </div>
                         <?php
-                        // Bucle que se ejecuta 10 veces para simular 10 lanzamientos.
-                        for ($i = 1; $i <= 10; $i++) {
-                            // En cada iteración, llamamos a las funciones para obtener un nuevo resultado.
+                        if ($_SERVER["REQUEST_METHOD"] == "GET" && !empty($_GET['lanzamientos'])) {
+                        $lanzamientos = htmlspecialchars($_GET['lanzamientos']);
+                        
+                        echo '<div class="card-footer">';
+                        echo '<table class="table table-bordered table-striped table-dark text-center mb-0">';
+                        echo '<thead><tr><th scope="col">Lanzamiento</th><th scope="col">Dado Normal</th><th scope="col">Dado Trucado</th></tr></thead>';
+                        echo '<tbody>';
+
+                        for ($i = 1; $i <= $lanzamientos; $i++) {
                             $normal = dadoNormal();
                             $trucado = dadoTrucado();
-                            // Imprimimos una fila (<tr>) con los resultados.
-                                echo "<tr>
-                                    <th scope='row'>$i</th>
+                            echo "<tr>
+                                    <th scope='row'>Lanzamiento $i</th>
                                     <td>$normal</td>
                                     <td>$trucado</td>
-                                  </tr>"; 
+                                  </tr>";
+                        }
+
+                        echo '</tbody>';
+                        echo '</table>';
+                        echo '</div>';
                         }
                         ?>
-                    </tbody>
-                </table>
-
-                <!-- Botón para recargar la página y hacer una nueva ronda de tiradas -->
-                <button class="btn btn-warning w-100 mt-0 mb-3" onclick="location.reload()">Hacer una nueva ronda de tiradas</button>
+                </div>
             </div>
         </div>
 

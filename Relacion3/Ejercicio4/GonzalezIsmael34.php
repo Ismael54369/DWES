@@ -1,5 +1,5 @@
 <?php
-    require_once 'relacion3.php'; // Incluimos la librería con las funciones
+    require_once '../relacion3.php'; // Incluimos la librería con las funciones
 ?>
 <!DOCTYPE html>
 <html lang="es">
